@@ -5,7 +5,7 @@ App(
     entry_point="dolphin_state_app",
     stack_size=2 * 1024,
     fap_category="Tools",
-    fap_version="0.1",
+    fap_version="1.0",
     fap_icon="dolphin_state_icon.png",
     fap_description="Dolphin State",
     fap_author="vladin79",
