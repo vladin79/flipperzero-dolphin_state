@@ -80,8 +80,6 @@ static void _draw_callback(Canvas* canvas, void* _model)
 {
     UNUSED(_model);
 
-    // canvas_draw_icon(canvas, 7, 17, &I_sherlok_53x45);
-
     /* Draw borders */
     canvas_draw_rframe(canvas, 0, 0, 128, 63, 7);
     canvas_draw_rframe(canvas, 0, 0, 128, 64, 7);
@@ -94,13 +92,10 @@ static void _draw_callback(Canvas* canvas, void* _model)
     canvas_draw_str(canvas, x, y, "To exit");
     canvas_draw_str(canvas, x, y + 9, "app press");
     canvas_draw_str(canvas, x, y + 18, "back");
-    // canvas_draw_icon(canvas, x + 37, y + 10, &I_Ok_btn_9x9);
 
-#if 1
     snprintf(app->cBuff, BUFF_SIZE, "%lu", app->dolphin->state->data.icounter);
     snprintf(app->cBuff, BUFF_SIZE, "%u", app->dolphin->state->data.butthurt_daily_limit);
     //    snprintf(app->cBuff, BUFF_SIZE, "%lu", (uint32_t)100);
     canvas_set_font(canvas, FontBigNumbers);
     canvas_draw_str_aligned(canvas, 30, y, AlignCenter, AlignCenter, app->cBuff);
-#endif
 }

@@ -11,17 +11,12 @@
 /* Text buffer size */
 #define BUFF_SIZE 32
 
-//typedef struct DolphinState DolphinState;
-
 /* Main application structure */
 typedef struct _DolphinState
 {
     /* Screen */
     Gui* gui;
     ViewDispatcher* view_dispatcher;
-    //    NotificationApp* notifications;
-    //    Widget* widget;
-    //    Popup* popup;
 
     /* Dolphin */
     Dolphin* dolphin;
@@ -38,7 +33,6 @@ typedef enum _DolphinStateViews
     VIEWS_COUNT
 } DolphinStateViews;
 
-#if 1
 typedef struct
 {
     uint8_t icounter_daily_limit[DolphinAppMAX];
@@ -55,9 +49,7 @@ struct DolphinState
     DolphinStoreData data;
     bool dirty;
 };
-#endif
 
-#if 1
 struct Dolphin
 {
     struct DolphinState* state;
@@ -68,7 +60,6 @@ struct Dolphin
     FuriEventLoopTimer* flush_timer;
     FuriEventLoopTimer* clear_limits_timer;
 };
-#endif
 
 extern DolphinState* app;
 
