@@ -1,0 +1,13 @@
+App(
+    appid="dolphin_state",
+    name="Dolphin State",
+    apptype=FlipperAppType.EXTERNAL,
+    entry_point="dolphin_state_app",
+    stack_size=2 * 1024,
+    fap_category="Tools",
+    fap_version="0.1",
+    fap_icon="dolphin_state_icon.png",
+    fap_description="Dolphin State",
+    fap_author="vladin79",
+    fap_weburl="https://github.com/vladin79/flipperzero-dolphin_state",
+)
