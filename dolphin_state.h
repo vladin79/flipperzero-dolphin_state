@@ -8,6 +8,16 @@
 #include <notification/notification.h>
 #include <dolphin/dolphin.h>
 
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Definitions                                                                                                        */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/* Application name */
+#define APP_NAME "Dolphin State"
+
+/* Application version */
+#define APP_VER "v1.1"
+
 /* Text buffer size */
 #define BUFF_SIZE 32
 
@@ -25,13 +35,11 @@ typedef struct _DolphinState
     char* cBuff;
 } DolphinState;
 
-typedef enum _DolphinStateViews
+enum DolphinStateViews
 {
-    VIEW_GENERAL,
-    VIEW_WIDGET,
-    VIEW_POPUP,
-    VIEWS_COUNT
-} DolphinStateViews;
+    VIEW_MENU,
+    VIEW_WIDGET
+};
 
 typedef struct
 {
@@ -61,6 +69,16 @@ struct Dolphin
     FuriEventLoopTimer* clear_limits_timer;
 };
 
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Global Data                                                                                                        */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
 extern DolphinState* app;
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Public Function Declarations                                                                                       */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+bool reset_limits(void);
 
 #endif

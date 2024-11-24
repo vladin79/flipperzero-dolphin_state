@@ -1,15 +1,12 @@
-#ifndef PASSPORT
-#define PASSPORT
-
-#include <stdint.h>
+#ifndef MENU_VIEW
+#define MENU_VIEW
 
 /* ------------------------------------------------------------------------------------------------------------------ */
 /* Public Function Declarations                                                                                       */
 /* ------------------------------------------------------------------------------------------------------------------ */
 
-char* timestamp_to_datetime_string(void);
-uint8_t passport_level(void);
-char* passport_mood(void);
-float passport_complete(void);
+void menu_view_alloc(void);
+void menu_view_free(void);
+void menu_view_switch(void);
 
 #endif
